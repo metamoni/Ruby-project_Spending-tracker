@@ -32,7 +32,7 @@ class Transaction
   end
 
 
-  def delete_all()
+  def self.delete_all()
     sql = "DELETE FROM transactions;"
     SqlRunner.run(sql)
   end

@@ -5,7 +5,7 @@ require("pry-byebug")
 
 Tag.delete_all()
 Merchant.delete_all()
-# Transaction.delete_all()
+Transaction.delete_all()
 
 tag1 = Tag.new({
   "name" => "Food stuffs",
