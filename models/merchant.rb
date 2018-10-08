@@ -14,7 +14,7 @@ class Merchant
 
   def save()
     sql = "INSERT INTO merchants (name, tag_id) VALUES ($1, $2)
-    RETURNING $3;"
+    RETURNING id;"
     @id = SqlRunner.run(sql, [@name, @tag_id]).first()["id"].to_i
   end
 

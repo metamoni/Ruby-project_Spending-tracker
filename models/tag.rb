@@ -3,19 +3,20 @@ require_relative("../db/sql_runner.rb")
 class Tag
 
   attr_reader :id
-  attr_accessor :name, :icon
+  attr_accessor :name, :description, :icon
 
   def initialize(options)
     @id = options["id"].to_i
     @name = options["name"]
+    @description = options["description"]
     @icon = options["icon"]
   end
 
 
   def save()
-    sql = "INSERT INTO tags (name, icon) VALUES ($1, $2)
+    sql = "INSERT INTO tags (name, description, icon) VALUES ($1, $2, $3)
     RETURNING id;"
-    @id = SqlRunner.run(sql, [@name, @icon]).first()["id"].to_i
+    @id = SqlRunner.run(sql, [@name, @description, @icon]).first()["id"].to_i
   end
 
 
@@ -27,8 +28,8 @@ class Tag
 
 
   def update()
-    sql = "UPDATE tags SET (name, icon) = ($1, $2) WHERE id = $3;"
-    SqlRunner.run(sql, [@name, @icon, @id])
+    sql = "UPDATE tags SET (name, description, icon) = ($1, $2, $3) WHERE id = $4;"
+    SqlRunner.run(sql, [@name, @description, @icon, @id])
   end
 
 
