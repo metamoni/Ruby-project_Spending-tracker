@@ -19,7 +19,7 @@ CREATE TABLE merchants (
 
 CREATE TABLE transactions (
   id SERIAL8 PRIMARY KEY,
+  value NUMERIC,
   merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE,
-  tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE,
-  value NUMERIC
+  tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE
 );
