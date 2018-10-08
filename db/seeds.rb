@@ -44,96 +44,84 @@ tag4.save()
 
 
 merchant1 = Merchant.new({
-  "name" => "Vogon Constructor Fleet",
-  "tag_id" => tag3.id
+  "name" => "Vogon Constructor Fleet"
   })
 
 merchant1.save()
 
 
 merchant2 = Merchant.new({
-  "name" => "The Blue Midget",
-  "tag_id" => tag3.id
+  "name" => "The Blue Midget"
   })
 
 merchant2.save()
 
 
 merchant3 = Merchant.new({
-  "name" => "RMS Titanic",
-  "tag_id" => tag3.id
+  "name" => "RMS Titanic"
   })
 
 merchant3.save()
 
 
 merchant4 = Merchant.new({
-  "name" => "Restaurant at the end of the Universe",
-  "tag_id" => tag4.id
+  "name" => "Restaurant at the end of the Universe"
   })
 
 merchant4.save()
 
 
 merchant5 = Merchant.new({
-  "name" => "Waynestock",
-  "tag_id" => tag4.id
+  "name" => "Waynestock"
   })
 
 merchant5.save()
 
 
 merchant6 = Merchant.new({
-  "name" => "Bend-Aid benefit concert",
-  "tag_id" => tag4.id
+  "name" => "Bend-Aid benefit concert"
   })
 
 merchant6.save()
 
 
 merchant7 = Merchant.new({
-  "name" => "Interdimensional cable",
-  "tag_id" => tag2.id
+  "name" => "Interdimensional cable"
   })
 
 merchant7.save()
 
 
 merchant8 = Merchant.new({
-  "name" => "Black Books",
-  "tag_id" => tag2.id
+  "name" => "Black Books"
   })
 
 merchant8.save()
 
 
 merchant9 = Merchant.new({
-  "name" => "Curse Purge Plus",
-  "tag_id" => tag2.id
+  "name" => "Curse Purge Plus"
   })
 
 merchant9.save()
 
 
 merchant10 = Merchant.new({
-  "name" => "The Quick Stop",
-  "tag_id" => tag1.id
+  "name" => "The Quick Stop"
   })
 
 merchant10.save()
 
 
 merchant11 = Merchant.new({
-  "name" => "Ogrimmar General Store",
-  "tag_id" => tag1.id
+  "name" => "Ogrimmar General Store"
   })
 
 merchant11.save()
 
 
 merchant12 = Merchant.new({
-  "name" => "Nabootique",
-  "tag_id" => tag1.id
+  "name" => "Nabootique"
   })
 
 merchant12.save()

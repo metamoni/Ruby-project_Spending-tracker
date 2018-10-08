@@ -12,8 +12,7 @@ CREATE TABLE tags (
 
 CREATE TABLE merchants (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
-  tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE
+  name VARCHAR(255)
 );
 
 
