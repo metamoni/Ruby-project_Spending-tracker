@@ -43,4 +43,25 @@ class Transaction
     SqlRunner.run(sql, [@id])
   end
 
+
+  def self.find(id)
+    sql = "SELECT * FROM tags WHERE id = $1;"
+    results = SqlRunner.run(sql, [id])
+    return Transaction.new(results.first)
+  end
+
+
+  def tag()
+    sql = "SELECT * FROM tags WHERE id = $1;"
+    results = SqlRunner.run(sql, [@tag_id])
+    return Tag.new(results.first)
+  end
+
+
+  def merchant()
+    sql = "SELECT * FROM merchants WHERE id = $1;"
+    results = SqlRunner.run(sql, [@merchant_id])
+    return Merchant.new(results.first)
+  end
+
 end

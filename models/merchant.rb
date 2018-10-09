@@ -42,4 +42,12 @@ class Merchant
     SqlRunner.run(sql, [@id])
   end
 
+
+  def self.find(id)
+    sql = "SELECT * FROM tags WHERE id = $1;"
+    results = SqlRunner.run(sql, [id])
+    return Merchant.new(results.first)
+  end
+
+
 end

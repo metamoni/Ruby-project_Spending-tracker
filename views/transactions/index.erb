@@ -3,8 +3,8 @@
 <main>
   <% @transactions.each do |transaction| %>
   <p>How much: <%= transaction.value %></p>
-  <p>Where: </p>
-  <p>What: </p>
+  <p>Where: <%= transaction.merchant.name %></p>
+  <p>What: <%= transaction.tag.name %></p>
   <% end %>
 </main>
 
