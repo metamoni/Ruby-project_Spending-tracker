@@ -1,1 +1,13 @@
-<p>Here's how much you've spent</p>
+<h1>Here's how much you've spent so far</h1>
+
+<main>
+  <% @transactions.each do |transaction| %>
+  <p>How much: <%= transaction.value %></p>
+  <p>Where: </p>
+  <p>What: </p>
+  <% end %>
+</main>
+
+<section>
+  <p>Any more you'd like to add?</p>
+</section>

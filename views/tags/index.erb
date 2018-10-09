@@ -1,1 +1,12 @@
-<p>All tags</p>
+<h1>Here's what you've been spending your money on</h1>
+
+  <main>
+    <% @tags.each do |tag| %>
+    <p>Category: <%= tag.name %></p>
+    <p>Description: <%= tag.description %></p>
+    <% end %>
+  </main>
+
+  <section>
+    <p>Any more you'd like to add?</p>
+  </section>

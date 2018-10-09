@@ -1,1 +1,11 @@
-<p>All merchants</p>
+<h1>This is where you've been spending your money</h1>
+
+  <main>
+    <% @merchants.each do |merchant| %>
+    <p>Name: <%= merchant.name %></p>
+    <% end %>
+  </main>
+
+  <section>
+    <p>Any more you'd like to add?</p>
+  </section>
