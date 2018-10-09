@@ -16,7 +16,7 @@ end
 
 post '/transactions' do
   transaction = Transaction.new(params)
-  transaction.save
+  transaction.save()
   redirect to(:'/transactions')
 end
 

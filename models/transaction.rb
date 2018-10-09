@@ -6,7 +6,7 @@ class Transaction
   attr_accessor :value, :merchant_id, :tag_id
 
   def initialize(options)
-    @id = options["id"].to_i
+    @id = options["id"].to_i if options["id"]
     @value = options["value"].to_f
     @merchant_id = options["merchant_id"].to_i
     @tag_id = options["tag_id"].to_i
@@ -38,16 +38,16 @@ class Transaction
   end
 
 
-  def delete(id)
+  def self.delete(id)
     sql = "DELETE FROM transactions WHERE id = $1;"
     SqlRunner.run(sql, [id])
   end
 
 
   def self.find(id)
-    sql = "SELECT * FROM tags WHERE id = $1;"
-    results = SqlRunner.run(sql, [id])
-    return Transaction.new(results.first)
+    sql = "SELECT * FROM transactions WHERE id = $1;"
+    result = SqlRunner.run(sql, [id]).first
+    return Transaction.new(result)
   end
 
 

@@ -44,9 +44,9 @@ class Merchant
 
 
   def self.find(id)
-    sql = "SELECT * FROM tags WHERE id = $1;"
-    results = SqlRunner.run(sql, [id])
-    return Merchant.new(results.first)
+    sql = "SELECT * FROM merchants WHERE id = $1;"
+    result = SqlRunner.run(sql, [id]).first
+    return Merchant.new(result)
   end
 
 
