@@ -38,9 +38,9 @@ class Transaction
   end
 
 
-  def delete()
+  def delete(id)
     sql = "DELETE FROM transactions WHERE id = $1;"
-    SqlRunner.run(sql, [@id])
+    SqlRunner.run(sql, [id])
   end
 
 
