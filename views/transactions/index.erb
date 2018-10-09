@@ -5,10 +5,7 @@
   <p>How much: <%= transaction.value %></p>
   <p>Where: <%= transaction.merchant.name %></p>
   <p>What: <%= transaction.tag.name %></p>
-  <p>
-    <form action="/transactions/<%= transaction.id %>/delete" method="post">
-    <input type="submit" value="Delete">
-  </p>
+  <p><a href="/transactions/<%= transaction.id %>/delete"><input type="submit" value="Delete"></a></p>
   <hr>
   <% end %>
 </main>

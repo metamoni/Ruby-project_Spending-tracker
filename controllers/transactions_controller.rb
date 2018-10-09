@@ -20,7 +20,7 @@ post '/transactions' do
   redirect to(:'/transactions')
 end
 
-post '/transactions/:id/delete' do
+get '/transactions/:id/delete' do
   Transaction.delete(params[:id])
   redirect to(:'/transactions')
 end

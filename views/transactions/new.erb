@@ -3,7 +3,7 @@
 <form action="/transactions" method="post">
 
   <label for="amount-field">How much was it?</label>
-  <input type="number" name="value" value="value" id="amount-field" />
+  <input type="number" step="0.01" min="0.01" name="value" value="value" id="amount-field" />
   <br>
   <label for="category-field">What was it?
     <select name="tag_id" id="category-field">
