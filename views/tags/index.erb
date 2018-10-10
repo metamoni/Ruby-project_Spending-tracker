@@ -2,19 +2,15 @@
 
   <main>
     <% @tags.each do |tag| %>
-    <p><strong><%= tag.name %></strong></p>
-    <p><%= tag.description %></p>
-    <br>
     <p>
-      <a href="/tags/<%= tag.id %>/edit"><input type="submit" value="Edit"></a>
+      <strong><%= tag.name %></strong><br>
+      <%= tag.description %>
     </p>
-    <p>
-      <a href="/tags/<%= tag.id %>/delete"><input type="submit" value="Delete"></a>
-    </p>
-    <hr>
+    <a href="/tags/<%= tag.id %>/edit"><input type="submit" value="Edit"></a>
+    <a href="/tags/<%= tag.id %>/delete"><input type="submit" value="Delete"></a>
     <% end %>
   </main>
 
   <section>
-    <p><a href="/tags/new">Add more</a></p>
+    <a href="/tags/new"><input type="submit" value="Add more"></a>
   </section>

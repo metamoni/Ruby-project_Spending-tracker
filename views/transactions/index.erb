@@ -1,23 +1,17 @@
-<h1>Here's how much you've spent so far</h1>
+<h1>Here are all your purchases</h1>
 
-<main>
-  <p id ="total">Total spent: <%= @total %></p>
-</main>
-
-<section>
-  <% @transactions.each do |transaction| %>
-    <p>How much: <%= transaction.value %></p>
-    <p>Where: <%= transaction.merchant.name %></p>
-    <p>What: <%= transaction.tag.name %></p>
-    <br>
-    <p>
+  <main>
+    <% @transactions.each do |transaction| %>
+      <p>
+        How much: <%= transaction.value %><br>
+        Where: <%= transaction.merchant.name %><br>
+        What: <%= transaction.tag.name %>
+      </p>
       <a href="/transactions/<%= transaction.id %>/edit"><input type="submit" value="Edit"></a>
-    </p>
-    <p>
       <a href="/transactions/<%= transaction.id %>/delete"><input type="submit" value="Delete"></a>
-    </p>
-    <hr>
-  <% end %>
+    <% end %>
+  </main>
 
-  <p><a href="/transactions/new">Add more</a></p>
-</section>
+  <section>
+    <a href="/transactions/new"><input type="submit" value="Add more"></a>
+  </section>

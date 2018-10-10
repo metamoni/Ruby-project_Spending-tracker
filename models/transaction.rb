@@ -66,14 +66,6 @@ class Transaction
   end
 
 
-  def self.total_spent()
-    total = 0
-    for transaction in Transaction.all()
-      total += transaction.value
-    end
-    return total.round(2)
-  end
-
   # def self.sort_by_oldest()
   #   sql = "SELECT * FROM transactions ORDER BY date_and_time ASC;"
   #   transactions = SqlRunner.run(sql)
@@ -85,13 +77,6 @@ class Transaction
   #   WHERE tag_id = $1;"
   #   transactions = SqlRunner.run(sql, @tag_id)
   #   return map(transactions)
-  # end
-  #
-  # def self.sort_by_oldest()
-  #   sql = "SELECT * FROM transactions
-  #   ORDER BY date_and_time ASC;"
-  #   transactions = SqlRunner.run(sql)
-  #   return transactions.map { |transaction| Transaction.new(transaction) }
   # end
 
   def self.map(transaction_data)

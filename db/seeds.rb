@@ -1,11 +1,13 @@
 require_relative("../models/merchant.rb")
 require_relative("../models/tag.rb")
 require_relative("../models/transaction.rb")
+require_relative("../models/user.rb")
 require("pry-byebug")
 
 Transaction.delete_all()
 Merchant.delete_all()
 Tag.delete_all()
+User.delete_all()
 
 
 tag1 = Tag.new({
@@ -198,6 +200,14 @@ transaction8 = Transaction.new({
   })
 
 transaction8.save()
+
+
+user1 = User.new({
+  "user_name" => "Monica",
+  "budget" => 500
+  })
+
+user1.save()
 
 
 binding.pry

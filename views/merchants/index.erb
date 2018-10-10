@@ -3,17 +3,11 @@
   <main>
     <% @merchants.each do |merchant| %>
     <p><%= merchant.name %></p>
-    <br>
-    <p>
-      <a href="/merchants/<%= merchant.id %>/edit"><input type="submit" value="Edit"></a>
-    </p>
-    <p>
-      <a href="/merchants/<%= merchant.id %>/delete"><input type="submit" value="Delete"></a>
-    </p>
-    <hr>
+    <a href="/merchants/<%= merchant.id %>/edit"><input type="submit" value="Edit"></a>
+    <a href="/merchants/<%= merchant.id %>/delete"><input type="submit" value="Delete"></a>
     <% end %>
   </main>
 
   <section>
-    <p><a href="/merchants/new">Add more</a></p>
+    <a href="/merchants/new"><input type="submit" value="Add more"></a>
   </section>
