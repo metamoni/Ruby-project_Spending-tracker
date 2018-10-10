@@ -3,19 +3,20 @@ require_relative("../db/sql_runner.rb")
 class Transaction
 
   attr_reader :id
-  attr_accessor :value, :merchant_id, :tag_id
+  attr_accessor :value, :merchant_id, :tag_id, :date_and_time
 
   def initialize(options)
     @id = options["id"].to_i if options["id"]
     @value = options["value"].to_f
     @merchant_id = options["merchant_id"].to_i
     @tag_id = options["tag_id"].to_i
+    @date_and_time = options["date_and_time"]
   end
 
 
   def save()
-    sql = "INSERT INTO transactions (value, merchant_id, tag_id) VALUES ($1, $2, $3) RETURNING id;"
-    results = SqlRunner.run(sql, [@value, @merchant_id, @tag_id])
+    sql = "INSERT INTO transactions (value, merchant_id, tag_id, date_and_time) VALUES ($1, $2, $3, $4) RETURNING id;"
+    results = SqlRunner.run(sql, [@value, @merchant_id, @tag_id, @date_and_time])
     @id = results.first()["id"].to_i
   end
 
@@ -28,8 +29,8 @@ class Transaction
 
 
   def update()
-    sql = "UPDATE transactions SET (value, merchant_id, tag_id) = ($1, $2, $3) WHERE id = $4;"
-    SqlRunner.run(sql, [@value, @merchant_id, @tag_id, @id])
+    sql = "UPDATE transactions SET (value, merchant_id, tag_id, date_and_time) = ($1, $2, $3, $4) WHERE id = $5;"
+    SqlRunner.run(sql, [@value, @merchant_id, @tag_id, @id, @date_and_time])
   end
 
 
@@ -72,6 +73,12 @@ class Transaction
       total += transaction.value
     end
     return total.round(2)
+  end
+
+  def self.sort_by_oldest()
+    sql = "SELECT * FROM transactions
+    ORDER BY date_and_time ASC;"
+    SqlRunner.run(sql)
   end
 
 end

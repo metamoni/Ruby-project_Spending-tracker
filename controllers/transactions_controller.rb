@@ -3,6 +3,7 @@ require("sinatra/contrib/all")
 require_relative("../models/transaction.rb")
 also_reload("../models/*")
 
+
 get '/transactions' do
   @total = Transaction.total_spent()
   @transactions = Transaction.all()
@@ -30,7 +31,7 @@ end
 
 post '/transactions/:id' do
   transaction = Transaction.new(params)
-  transaction.update
+  transaction.update()
   redirect to '/transactions'
 end
 
