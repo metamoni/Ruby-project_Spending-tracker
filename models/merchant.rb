@@ -26,7 +26,7 @@ class Merchant
 
 
   def update()
-    sql = "UPDATE merchants SET (name) = ($1) WHERE id = $2;"
+    sql = "UPDATE merchants SET name = $1 WHERE id = $2;"
     SqlRunner.run(sql, [@name, @id])
   end
 
@@ -37,9 +37,9 @@ class Merchant
   end
 
 
-  def delete()
+  def self.delete(id)
     sql = "DELETE FROM merchants WHERE id = $1;"
-    SqlRunner.run(sql, [@id])
+    SqlRunner.run(sql, [id])
   end
 
 

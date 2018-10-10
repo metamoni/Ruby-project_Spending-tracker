@@ -32,7 +32,7 @@ end
 post '/transactions/:id' do
   transaction = Transaction.new(params)
   transaction.update()
-  redirect to '/transactions'
+  redirect to(:'/transactions')
 end
 
 get '/transactions/:id/delete' do

@@ -2,7 +2,14 @@
 
   <main>
     <% @merchants.each do |merchant| %>
-    <p>Name: <%= merchant.name %></p>
+    <p><%= merchant.name %></p>
+    <br>
+    <p>
+      <a href="/merchants/<%= merchant.id %>/edit"><input type="submit" value="Edit"></a>
+    </p>
+    <p>
+      <a href="/merchants/<%= merchant.id %>/delete"><input type="submit" value="Delete"></a>
+    </p>
     <hr>
     <% end %>
   </main>

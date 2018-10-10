@@ -39,9 +39,9 @@ class Tag
   end
 
 
-  def delete()
+  def self.delete(id)
     sql = "DELETE FROM tags WHERE id = $1;"
-    SqlRunner.run(sql, [@id])
+    SqlRunner.run(sql, [id])
   end
 
 
