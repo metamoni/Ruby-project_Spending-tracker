@@ -3,21 +3,24 @@
   <label for="amount-field">How much was it?</label>
   <input type="number" step="0.01" min="0.01" name="value" value="<%= @transaction.value %>" id="amount-field" />
   <br>
+
   <label for="category-field">What was it?
-    <select name="tag_name" id="category-field">
+    <select name="tag_id" id="category-field">
       <% for tag in @tags %>
       <option value="<%= tag.id %>"><%= tag.name %></option>
       <% end %>
     </select>
   </label>
   <br>
+
   <label for="merchant-field">Where did you get it?
-    <select id="merchant-field" name="merchant_name">
+    <select id="merchant-field" name="merchant_id">
       <% for merchant in @merchants %>
       <option value="<%= merchant.id %>"><%= merchant.name %></option>
       <% end %>
     </select>
   <br>
+
   <input type="submit" value="Edit">
 
   </form>

@@ -65,4 +65,13 @@ class Transaction
     return Merchant.new(results.first)
   end
 
+
+  def self.total_spent()
+    total = 0
+    for transaction in Transaction.all()
+      total += transaction.value
+    end
+    return total.round(2)
+  end
+
 end

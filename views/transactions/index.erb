@@ -1,21 +1,23 @@
 <h1>Here's how much you've spent so far</h1>
 
 <main>
+  <p>Total spent: <%= @total %></p>
+</main>
 
+<section>
   <% @transactions.each do |transaction| %>
     <p>How much: <%= transaction.value %></p>
     <p>Where: <%= transaction.merchant.name %></p>
     <p>What: <%= transaction.tag.name %></p>
     <br>
-    <p><a href="/transactions/<%= transaction.id %>/edit">Edit</a></p>
+    <p>
+      <a href="/transactions/<%= transaction.id %>/edit"><input type="submit" value="Edit"></a>
+    </p>
     <p>
       <a href="/transactions/<%= transaction.id %>/delete"><input type="submit" value="Delete"></a>
     </p>
-  <hr>
+    <hr>
   <% end %>
 
-</main>
-
-<section>
-  <p><a href="/transactions/new">Add another one</a></p>
+  <p><a href="/transactions/new">Add more</a></p>
 </section>
