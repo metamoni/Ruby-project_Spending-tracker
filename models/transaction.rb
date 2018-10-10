@@ -65,19 +65,11 @@ class Transaction
     return Merchant.new(results.first)
   end
 
-
-  # def self.sort_by_oldest()
-  #   sql = "SELECT * FROM transactions ORDER BY date_and_time ASC;"
-  #   transactions = SqlRunner.run(sql)
-  #   return map(transactions)
-  # end
-
-  # def self.get_all_by_tag(tag)
-  #   sql = "SELECT * FROM transactions
-  #   WHERE tag_id = $1;"
-  #   transactions = SqlRunner.run(sql, @tag_id)
-  #   return map(transactions)
-  # end
+  def self.filter_by_tag(tag)
+    sql = "SELECT * FROM transactions WHERE tag_id = $1;"
+    transactions = SqlRunner.run(sql, [tag])
+    return map(transactions)
+  end
 
   def self.map(transaction_data)
     return transaction_data.map { |transaction| Transaction.new(transaction) }
