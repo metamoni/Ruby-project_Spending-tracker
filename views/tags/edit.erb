@@ -1,0 +1,10 @@
+<form action="/tags/<%= @tag.id %>" method="post">
+
+  <label for="category-name-field">Name: </label>
+  <input type="text" name="name" value="<%= @tag.name %>" id="category-name-field" />
+  <br>
+  <label for="category-description-field">Description: </label>
+  <input type="textarea" name="description" value="<%= @tag.description %>"/>
+  <input type="submit" value="Edit category">
+
+</form>

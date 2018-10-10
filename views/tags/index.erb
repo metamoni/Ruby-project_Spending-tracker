@@ -2,12 +2,19 @@
 
   <main>
     <% @tags.each do |tag| %>
-    <p>Category: <%= tag.name %></p>
-    <p>Description: <%= tag.description %></p>
+    <p><strong><%= tag.name %></strong></p>
+    <p><%= tag.description %></p>
+    <br>
+    <p>
+      <a href="/tags/<%= tag.id %>/edit"><input type="submit" value="Edit"></a>
+    </p>
+    <p>
+      <a href="/tags/<%= tag.id %>/delete"><input type="submit" value="Delete"></a>
+    </p>
     <hr>
     <% end %>
   </main>
 
   <section>
-    <p>Any more you'd like to add?</p>
+    <p><a href="/tags/new">Add more</a></p>
   </section>

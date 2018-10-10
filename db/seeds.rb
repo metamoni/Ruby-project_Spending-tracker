@@ -131,7 +131,8 @@ merchant12.save()
 transaction1 = Transaction.new({
   "value" => 7.2,
   "merchant_id" => merchant10.id,
-  "tag_id" => tag1.id
+  "tag_id" => tag1.id,
+  "date_and_time" => "2018-10-10 12:27:32.834676"
   })
 
 transaction1.save()
@@ -140,7 +141,8 @@ transaction1.save()
 transaction2 = Transaction.new({
   "value" => 32,
   "merchant_id" => merchant9.id,
-  "tag_id" => tag2.id
+  "tag_id" => tag2.id,
+  "date_and_time" => "2018-10-10 13:00:32.834676"
   })
 
 transaction2.save()
@@ -149,7 +151,8 @@ transaction2.save()
 transaction3 = Transaction.new({
   "value" => 153.79,
   "merchant_id" => merchant2.id,
-  "tag_id" => tag3.id
+  "tag_id" => tag3.id,
+  "date_and_time" => "2018-10-10 13:05:32.834676"
   })
 
 transaction3.save()
@@ -158,7 +161,8 @@ transaction3.save()
 transaction4 = Transaction.new({
   "value" => 20,
   "merchant_id" => merchant6.id,
-  "tag_id" => tag4.id
+  "tag_id" => tag4.id,
+  "date_and_time" => "2018-10-10 12:54:32.834676"
   })
 
 transaction4.save()
@@ -167,7 +171,8 @@ transaction4.save()
 transaction5 = Transaction.new({
  "value" => 12.3,
   "merchant_id" => merchant8.id,
-  "tag_id" => tag2.id
+  "tag_id" => tag2.id,
+  "date_and_time" => "2018-10-10 12:38:32.834676"
   })
 
 transaction5.save()
@@ -176,7 +181,8 @@ transaction5.save()
 transaction6 = Transaction.new({
   "value" => 26.5,
    "merchant_id" => merchant4.id,
-   "tag_id" => tag4.id
+   "tag_id" => tag4.id,
+   "date_and_time" => "2018-10-10 11:23:32.834676"
   })
 
 transaction6.save()
@@ -185,7 +191,8 @@ transaction6.save()
 transaction7 = Transaction.new({
   "value" => 7.99,
    "merchant_id" => merchant7.id,
-   "tag_id" => tag2.id
+   "tag_id" => tag2.id,
+   "date_and_time" => "2018-10-10 10:07:32.834676"
   })
 
 transaction7.save()
@@ -194,7 +201,8 @@ transaction7.save()
 transaction8 = Transaction.new({
   "value" => 17.5,
    "merchant_id" => merchant12.id,
-   "tag_id" => tag1.id
+   "tag_id" => tag1.id,
+   "date_and_time" => "2018-10-10 09:50:32.834676"
   })
 
 transaction8.save()
