@@ -7,7 +7,7 @@
   <label for="category-field">What was it?
     <select name="tag_id" id="category-field">
       <% for tag in @tags %>
-      <option value="<%= tag.id %>"><%= tag.name %></option>
+      <option value="<%= tag.id %>" <%= "selected" if @transaction.tag_id == tag.id %>><%= tag.name %></option>
       <% end %>
     </select>
   </label>
@@ -16,7 +16,7 @@
   <label for="merchant-field">Where did you get it?
     <select id="merchant-field" name="merchant_id">
       <% for merchant in @merchants %>
-      <option value="<%= merchant.id %>"><%= merchant.name %></option>
+      <option value="<%= merchant.id %>" <%= "selected" if @transaction.merchant_id == merchant.id %>><%= merchant.name %></option>
       <% end %>
     </select>
   <br>
