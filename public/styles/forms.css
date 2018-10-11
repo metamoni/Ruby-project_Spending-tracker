@@ -1,0 +1,19 @@
+form {
+  margin-top: 30px;
+}
+
+.delete-buttons {
+  margin: 0;
+}
+
+#description {
+  width: 400px;
+  height: 250px;
+}
+
+select {
+  font-family: 'Poiret One', cursive;
+  margin-top: 10px;
+  font-size: 90%;
+  width: auto;
+}
