@@ -11,7 +11,7 @@ class User
     @budget = options["budget"],
     @transactions = Transaction.all()
   end
-  
+
 
   def save()
     sql = "INSERT INTO users (user_name, budget) VALUES ($1, $2)
@@ -23,9 +23,7 @@ class User
 
   def total_spent()
     total = 0
-    for transaction in @transactions
-      total += transaction.value
-    end
+    @transactions.each { |transaction| total += transaction.value }
     return total.round(2)
   end
 
@@ -33,17 +31,17 @@ class User
   def budget_status()
     amount_spent = total_spent()
 
-    if @budget == amount_spent
-      return "You've wasted all your budget"
-    elsif @budget < (amount_spent * 0.3)
-      return "Careful now! Your funds are running low"
-    elsif @budget < amount_spent
-      return "You've spent more than you can afford"
+    case amount_spent
+    when @budget == amount_spent
+      "You've wasted all your budget"
+    when @budget < (amount_spent * 0.3)
+      "Careful now! Your funds are running low"
+    when @budget < amount_spent
+      "You've spent more than you can afford"
     else
-      return "Lookin' good!"
+      "Lookin' good!"
     end
   end
-
 
   def self.delete_all()
     sql = "DELETE FROM users;"
