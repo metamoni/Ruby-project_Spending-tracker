@@ -30,7 +30,8 @@ post '/tags/:id' do
   redirect to(:'/tags')
 end
 
-get '/tags/:id/delete' do
-  Tag.delete(params[:id])
+post '/tags/:id/delete' do
+  tag = Tag.find(params[:id])
+  tag.delete()
   redirect to(:'/tags')
 end

@@ -2,13 +2,19 @@
 
   <main>
     <% @transactions.each do |transaction| %>
+
       <p>
         How much: <%= transaction.value %><br>
         Where: <%= transaction.merchant.name %><br>
         What: <%= transaction.tag.name %>
       </p>
+
       <a href="/transactions/<%= transaction.id %>/edit"><input type="submit" value="Edit"></a>
-      <a href="/transactions/<%= transaction.id %>/delete"><input type="submit" value="Delete"></a>
+
+      <form action="/transactions/<%= transaction.id %>/delete" method="post">
+        <input type="submit" value="Delete">
+      </form>
+
     <% end %>
   </main>
 

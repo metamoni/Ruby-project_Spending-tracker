@@ -30,7 +30,8 @@ post '/merchants/:id' do
   redirect to(:'/merchants')
 end
 
-get '/merchants/:id/delete' do
-  Merchant.delete(params[:id])
+post '/merchants/:id/delete' do
+  merchant = Merchant.find(params[:id])
+  merchant.delete()
   redirect to(:'/merchants')
 end

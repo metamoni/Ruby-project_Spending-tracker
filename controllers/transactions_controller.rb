@@ -34,7 +34,8 @@ post '/transactions/:id' do
   redirect to(:'/transactions')
 end
 
-get '/transactions/:id/delete' do
-  Transaction.delete(params[:id])
+post '/transactions/:id/delete' do
+  transaction = Transaction.find(params[:id])
+  transaction.delete()
   redirect to(:'/transactions')
 end
