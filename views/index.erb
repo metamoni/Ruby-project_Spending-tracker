@@ -1,15 +1,17 @@
-<h1>Spendex</h1>
-<p id="subhead">Another glorified calculator</p>
-
-<h2>Hi there, <%= @user.user_name %>!</h2>
-
 <main>
-  <%= @user.budget_status %>
-  <p>You've spent <%= @user.total_spent %> so far, and your budget is <%= @user.budget %>.</p>
-</main>
+  <section id="logo">
+    <h1>Spendex</h1>
+    <p id="subhead">Another glorified calculator</p>
+  </section>
 
-<section>
-  <h2>Who is this app for?</h2>
+  <section id="summary">
+    <h2>Hi there, <%= @user.user_name %>!</h2>
+    <%= @user.budget_status %>
+    <p>You've spent <%= @user.total_spent %> so far, and your budget is <%= @user.budget %>.</p>
+  </section>
+
+  <section id="product-info">
+    <h2>Who is this app for?</h2>
 
     <h3>Your mum</h3>
     <p>So she can buy more ugly jumpers and useless knick-knacks for her ungrateful children who never visit or call.</p>
@@ -28,4 +30,5 @@
 
     <h3>Most importantly - YOU</h3>
     <p>Get better at managing your finances, so you can save for an expensive vacation and make your friends jealous, get that fancy new TV screen, or identify your terrible financial decisions to that leave you broke before every paycheck.</p>
-</section>
+  </section>
+</main>
