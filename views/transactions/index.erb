@@ -1,12 +1,11 @@
-<h1>Here are all your purchases</h1>
+<h2>All your transactions, painfully detailed</h2>
 
-  <main>
+  <section>
     <% @transactions.each do |transaction| %>
-
       <p>
-        How much: <%= transaction.value %><br>
-        Where: <%= transaction.merchant.name %><br>
-        What: <%= transaction.tag.name %>
+        <span>How much:</span> <%= transaction.value %><br>
+        <span>Where:</span> <%= transaction.merchant.name %><br>
+        <span>What:</span> <%= transaction.tag.name %>
       </p>
 
       <a href="/transactions/<%= transaction.id %>/edit"><input type="submit" value="Edit"></a>
@@ -15,9 +14,11 @@
         <input type="submit" value="Delete">
       </form>
 
+      <hr>
     <% end %>
-  </main>
+  </section>
 
   <section>
-    <a href="/transactions/new"><input type="submit" value="Add more"></a>
+    <p>Add a new hole in your budget?</p>
+    <a href="/transactions/new"><input class="main-button" type="submit" value="Add more"></a>
   </section>

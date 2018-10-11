@@ -1,0 +1,19 @@
+button, input {
+  background-color: #666699;
+  font-size: 85%;
+  margin-top: 10px;
+  color: #e0e0eb;
+  border: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+button:hover, input:hover {
+  background-color: #52527a;
+}
+
+.main-button {
+  font-size: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 7px 25px;
+}

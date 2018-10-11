@@ -1,12 +1,10 @@
-<h1>Here's what you've been spending your money on</h1>
+<h2>This is what you've spent your money on</h2>
 
   <main>
     <% @tags.each do |tag| %>
 
-    <p>
-      <strong><%= tag.name %></strong><br>
-      <%= tag.description %>
-    </p>
+    <h3><%= tag.name %></h3>
+    <p><%= tag.description %></p>
 
     <a href="/tags/<%= tag.id %>/edit"><input type="submit" value="Edit"></a>
 
@@ -18,5 +16,6 @@
   </main>
 
   <section>
-    <a href="/tags/new"><input type="submit" value="Add more"></a>
+    <p>Any other crap you buy on a regular basis?</p>
+    <a href="/tags/new"><input class="main-button" type="submit" value="Add more"></a>
   </section>

@@ -31,13 +31,13 @@ class User
     remaining = @budget - total_spent().round(2)
 
     if remaining == 0
-      "You've spent all your money"
+      "You've spent all your money!"
     elsif remaining < 0
       "You've spent more than you can afford"
     elsif remaining < (@budget * 0.3)
-      "Careful now! Your funds are running low"
+      "I hate to break this to you, but hour funds are running low"
     else
-      "Lookin' good!"
+      "Your finances are lookin' good!"
     end
   end
 

@@ -3,28 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Your fancy budget calculator app</title>
+
     <link type="text/css" rel="stylesheet" href="/styles/reset.css">
     <link type="text/css" rel="stylesheet" href="/styles/layout.css">
     <link type="text/css" rel="stylesheet" href="/styles/forms.css">
     <link type="text/css" rel="stylesheet" href="/styles/buttons.css">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Indie+Flower|Permanent+Marker|Itim|Krub" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Poiret+One|Indie+Flower|Permanent+Marker" rel="stylesheet">
   </head>
+
   <body>
 
-    <main>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/tags">Categories</a></li>
-          <li><a href="/merchants">Merchants</a></li>
-          <li><a href="/transactions">Transactions</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/tags">Categories</a></li>
+        <li><a href="/merchants">Merchants</a></li>
+        <li><a href="/transactions">Transactions</a></li>
+      </ul>
+    </nav>
 
-      <section id="content">
+    <header role="banner" id="logo">
+      <h1>Spendex</h1>
+      <p>Another glorified calculator</p>
+    </header>
+
+    <main class="wrapper">
         <%= yield %>
-      </section>
     </main>
+
+    <footer class="wrapper">
+      &copy; 2018 - This website was created as part of the CodeClan professional Software development course
+    </footer>
 
   </body>
 </html>
