@@ -6,11 +6,9 @@ require_relative("./controllers/transactions_controller.rb")
 require_relative("./models/user.rb")
 
 get '/' do
-  @transactions = Transaction.all()
   @user = User.new({
     "user_name" => "Mrs. O'Reilly",
-    "budget" => 750,
-    "transactions" => @transactions
+    "budget" => 750
     })
   erb(:index)
 end
