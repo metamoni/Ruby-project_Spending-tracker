@@ -27,17 +27,20 @@ class User
   end
 
 
-  def budget_status()
-    remaining = @budget - total_spent().round(2)
+  def remaining()
+    return @budget - total_spent().round(2)
+  end
 
-    if remaining == 0
+
+  def budget_status()
+    if remaining() == 0
       "You've spent all your money!"
-    elsif remaining < 0
+    elsif remaining() < 0
       "You've spent more than you can afford"
-    elsif remaining < (@budget * 0.3)
+    elsif remaining() < (@budget * 0.3)
       "I hate to break this to you, but hour funds are running low"
     else
-      "Your finances are lookin' good!"
+      "Lookin' good!"
     end
   end
 

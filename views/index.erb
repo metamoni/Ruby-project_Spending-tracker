@@ -2,6 +2,7 @@
     <div id="greeting">
       <h2>Hi there, <%= @user.user_name %>!</h2>
       <p><%= @user.budget_status %></p>
+      <div id="circle">£<%= @user.remaining %><p>left</p></div>
     </div>
 
     <div id="summary">
