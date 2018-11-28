@@ -208,7 +208,3 @@ user1 = User.new({
   })
 
 user1.save()
-
-
-binding.pry
-nil
