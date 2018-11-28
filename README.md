@@ -17,23 +17,23 @@ Looking back at this code now, it's very tempting to go back and fix things or a
 
 
 <h3>What works:</h3>
-- add categories, merchants, and transactions
-- edit categories, merchants, and transactions
-- delete categories, merchants, and transactions
-- calculate total spendings
-- display remaining budget
+- add categories, merchants, and transactions<br>
+- edit categories, merchants, and transactions<br>
+- delete categories, merchants, and transactions<br>
+- calculate total spendings<br>
+- display remaining budget<br>
 - display personalised messages, based on amount spent
 
 
 <h3>What I would change, add, or do differently:</h3>
-- add timestamps
-- store user details in the database
+- add timestamps<br>
+- store user details in the database<br>
 - display purchases by amount (low-high, high-low) - the methods are already there in the code, but I haven't managed to implement this functionality before the deadline
 
 
 <h2>Instructions to run the app</h2>
-- make sure you have Ruby and Sinatra installed
-- run ruby app.rb in your Terminal
-- run psql -d spending_tracker -f db/spending_tracker.sql
-- run ruby db/seeds.rb to populate the database
+- make sure you have Ruby and Sinatra installed<br>
+- run ruby app.rb in your Terminal<br>
+- run psql -d spending_tracker -f db/spending_tracker.sql<br>
+- run ruby db/seeds.rb to populate the database<br>
 - follow <a title="Spending tracker app" href="http://localhost:4567/">this link</a> to open the app in your browser
