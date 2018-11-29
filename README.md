@@ -33,7 +33,7 @@ Looking back at this code now, it's very tempting to go back and fix things or a
 
 <h2>Instructions to run the app</h2>
 - make sure you have Ruby and Sinatra installed<br>
-- run ruby app.rb in your Terminal<br>
-- run psql -d spending_tracker -f db/spending_tracker.sql<br>
-- run ruby db/seeds.rb to populate the database<br>
+- run <i>ruby app.rb</i> in your Terminal<br>
+- run <i>psql -d spending_tracker -f db/spending_tracker.sql</i><br>
+- run <i>ruby db/seeds.rb</i> to populate the database<br>
 - follow <a title="Spending tracker app" href="http://localhost:4567/">this link</a> to open the app in your browser
