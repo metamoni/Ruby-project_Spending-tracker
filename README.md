@@ -37,3 +37,6 @@ Looking back at this code now, it's very tempting to go back and fix things or a
 - run <i>psql -d spending_tracker -f db/spending_tracker.sql</i><br>
 - run <i>ruby db/seeds.rb</i> to populate the database<br>
 - follow <a title="Spending tracker app" href="http://localhost:4567/">this link</a> to open the app in your browser
+
+
+<img src="https://github.com/metamoni/Ruby-project_Spending-tracker/blob/master/Spendex-%20Your%20glorified%20calculator%20(Spending%20tracker%20app).png" alt="Spendex spending tracker" />
